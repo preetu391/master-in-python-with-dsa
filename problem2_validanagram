@@ -1,0 +1,17 @@
+def validAnagram(s,t):
+    freq_array = [0] * 26
+    for c in s:
+        freq_array[ord(c)-ord('a')] += 1
+    for c in t:
+        freq_array[ord(c)-ord('a')] -=1
+    
+    for ele in freq_array:
+        if ele!=0:
+            return False
+    return True
+    
+s= "anagram"
+t= "nagaram"
+
+print(validAnagram(s,t))
+print(ord('a'))

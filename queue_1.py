@@ -1,0 +1,15 @@
+import queue
+queue1 = queue.Queue()
+
+queue1.put(1)
+queue1.put(2)
+queue1.put(3)
+queue1.put(4)
+print(queue1.queue, end=" ")
+print(f"front element is {queue1.queue[0]}")
+queue1.get()
+print(queue1.queue, end=" ")
+print(f"front element is {queue1.queue[0]}")
+queue1.get()
+print(queue1.queue, end=" ")
+print(f"front element is {queue1.queue[0]}")

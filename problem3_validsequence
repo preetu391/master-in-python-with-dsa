@@ -1,0 +1,17 @@
+def valid_sequence(string):
+    stack = []
+    map = {")": "(", "}": "{", "]": "["}
+    for bracket in string:
+        if bracket in map:
+            if stack and stack[-1] == map[bracket]:
+                stack.pop()
+            else:
+                return False
+        else:
+            stack.append(bracket)
+    if stack:
+        return False
+    return True
+
+s = "((({[([])]})]"
+print(valid_sequence(s))
